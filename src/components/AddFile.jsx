@@ -108,7 +108,13 @@ const AddFile = () => {
   };
 
   const handleJoinCommunity = () => {
-    // Add your logic to handle joining the Whatsapp community
+    window.open("https://chat.whatsapp.com/KhcqRxM6R54HRliKOwFwgy", "_blank");
+  };
+  const handlePlayStore = () => {
+    window.open(
+      "https://play.google.com/store/apps/details?id=com.examSathi.examSathi",
+      "_blank"
+    );
   };
 
   const handleshare = (file) => {
@@ -221,9 +227,9 @@ const AddFile = () => {
             <IconBrandWhatsapp size={30} />
             <span>Whatsapp जॉईन करा</span>
           </div>
-          {/* <Button onClick={handleJoinCommunity} variant="light" size="sm">
+          <Button onClick={handleJoinCommunity} variant="light" size="sm">
             Join Now
-          </Button> */}
+          </Button>
         </div>
 
         <div className="flex items-center justify-start space-x-2 bg-black bg-opacity-70 w-[100%] md:w-[50%] lg:w-[30%]   text-white p-4 rounded-lg shadow-lg md:fixed md:left-4 md:bottom-4 m-1">
@@ -232,7 +238,7 @@ const AddFile = () => {
             alt="Exam Sathi"
             className="w-full h-10 m-0"
           />
-          <Button className="">
+          <Button className="" onClick={handlePlayStore}>
             Daily Revision आणि आणखी PDF साठी App Download करा
           </Button>
         </div>
