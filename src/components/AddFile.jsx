@@ -134,32 +134,32 @@ const AddFile = () => {
 
   return (
     <div className="p-2">
-      <div className="flex flex-row gap-3 justify-center items-center">
+      <div className="flex justify-center items-center space-x-3">
         <img
           src="/logo512.png"
           alt="Exam Sathi"
-          className="w-14 h-14 m-0 rounded-md"
+          className="w-14 h-14 rounded-md"
         />
-        <h1 className="text-center text-3xl font-bold font-sans text-blue-900">
+        <h1 className="text-center text-3xl font-bold text-blue-900">
           EXAM SATHI
         </h1>
       </div>
-      <h3 className="text-center my-2 underline text-lg text-purple-950 font-semibold">
+      <h3 className="text-center my-2 underline text-lg text-purple-700 font-semibold">
         सर्व स्पर्धा परीक्षेचे important notes आणि PDF इथे मिळतील अगदी Free.
       </h3>
-      <div className="flex items-center gap-2 mb-4">
+      <div className="flex items-center space-x-2 mb-4">
         <input
           type="file"
           onChange={handleFileChange}
-          className="rounded-md p-3"
+          className="rounded p-3"
           accept=".pdf"
         />
-        <Button
+        <button
           onClick={handleFileUpload}
-          className="bg-blue-500 rounded-lg p-2"
+          className="px-4 py-2 rounded bg-blue-500 text-white"
         >
           Upload!
-        </Button>
+        </button>
       </div>
       <div className="flex flex-col lg:flex-row">
         <div className="w-full lg:w-2/5">
@@ -167,7 +167,7 @@ const AddFile = () => {
             {fileList.map((file) => (
               <div
                 key={file.filename}
-                className="flex flex-col items-center relative text-center p-2"
+                className="flex flex-col items-center relative text-center p-2 cursor-pointer"
                 onClick={() => handleFileClick(file)}
                 onMouseEnter={() => setHoveredFile(file)}
                 onMouseLeave={() => setHoveredFile(null)}
@@ -176,24 +176,9 @@ const AddFile = () => {
                 <span>{file.filename}</span>
                 <button
                   onClick={() => handleshare(file)}
-                  className="absolute top-0 right-0"
+                  className="absolute top-0 right-0 p-1"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-brand-whatsapp"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                    stroke="green"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
-                    <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"></path>
-                  </svg>
+                  <IconBrandWhatsapp size={30} stroke="green" />
                 </button>
               </div>
             ))}
@@ -209,45 +194,36 @@ const AddFile = () => {
                   width="100%"
                   height="900px"
                   type="application/pdf"
-                  target="_blank"
                 />
               </div>
             ) : (
               <div className="flex items-center justify-center h-full">
                 <h1>No Preview</h1>
-                <img src="/NoPreview.png" alt="No Preview" />
               </div>
             )}
           </div>
         )}
       </div>
-      <div className="flex flex-col md:flex-row gap-2 ">
-        <div className="w-[100%] md:w-[25%] bg-green-500 h-[8%] text-white p-4 rounded-lg shadow-lg fixed bottom-16 md:left-auto md:right-0  md:top-1/2 md:transform-translate-y-[-50%] z-20 m-1">
-          <div className="flex items-center justify-center space-x-2">
+      <div className="flex flex-col md:flex-row ">
+        <div className="fixed bottom-16  md:left-auto md:right-0 md:top-1/2 md:translate-y-[-50%] z-20 m-1">
+          <div className="w-full md:w-auto bg-green-500 text-white p-4 rounded-lg shadow-lg flex items-center justify-center space-x-2">
             <IconBrandWhatsapp size={30} />
-            <Button
+            <button
               onClick={handleJoinCommunity}
-              variant="light"
-              size="sm"
               className="text-white hover:text-black"
             >
               Whatsapp जॉईन करा
-            </Button>
+            </button>
           </div>
         </div>
-
-        <div className="flex items-center justify-start space-x-2 bg-black bg-opacity-70 text-white p-4 rounded-lg shadow-lg fixed bottom-0 md:left-4 md:bottom-4 md:flex-wrap m-1">
-          <img src="/logo512.png" alt="Exam Sathi" className="w-10 h-10 " />
-          <Button
-            className=""
+        <div className="fixed bottom-0 left-0 md:left-4 md:bottom-4 w-full md:w-auto bg-black text-white p-4 rounded-lg shadow-lg flex items-center justify-start space-x-2 mt-2 md:mt-0">
+          <img src="/logo512.png" alt="Exam Sathi" className="w-10 h-10" />
+          <button
             onClick={handlePlayStore}
-            classNames=""
-            variant=""
+            className="text-white hover:text-black"
           >
-            <span className="text-black flex">
-              Daily Revision आणि आणखी PDF साठी App Download करा
-            </span>
-          </Button>
+            Daily Revision आणि आणखी PDF साठी App Download करा
+          </button>
         </div>
       </div>
     </div>
