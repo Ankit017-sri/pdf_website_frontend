@@ -221,8 +221,8 @@ const AddFile = () => {
           </div>
         )}
       </div>
-      <div className="flex flex-col md:flex-row">
-        <div className="w-[100%] md:w-[25%] relative bg-green-500 text-white p-4 rounded-lg shadow-lg md:left-auto m-1 md:top-auto md:transform-none md:fixed md:right-0 z-20">
+      <div className="flex flex-col md:flex-row gap-2 ">
+        <div className="w-[100%] md:w-[25%] bg-green-500 h-[8%] text-white p-4 rounded-lg shadow-lg fixed bottom-16 md:left-auto md:right-0  md:top-1/2 md:transform-translate-y-[-50%] z-20 m-1">
           <div className="flex items-center justify-center space-x-2">
             <IconBrandWhatsapp size={30} />
             <Button
@@ -236,19 +236,15 @@ const AddFile = () => {
           </div>
         </div>
 
-        <div className="inline-flex items-center justify-start space-x-2 bg-black bg-opacity-70 text-white p-4 rounded-lg shadow-lg md:fixed md:left-4 md:bottom-4 m-1">
-          <img
-            src="/logo512.png"
-            alt="Exam Sathi"
-            className="w-full h-10 m-0"
-          />
+        <div className="flex items-center justify-start space-x-2 bg-black bg-opacity-70 text-white p-4 rounded-lg shadow-lg fixed bottom-0 md:left-4 md:bottom-4 md:flex-wrap m-1">
+          <img src="/logo512.png" alt="Exam Sathi" className="w-10 h-10 " />
           <Button
             className=""
             onClick={handlePlayStore}
-            classNames="w-full hover:text-white"
-            variant="defualt"
+            classNames=""
+            variant=""
           >
-            <span className="text-white">
+            <span className="text-black flex">
               Daily Revision आणि आणखी PDF साठी App Download करा
             </span>
           </Button>
