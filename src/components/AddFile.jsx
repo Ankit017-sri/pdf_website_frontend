@@ -225,21 +225,32 @@ const AddFile = () => {
         <div className="w-[100%] md:w-[25%] relative bg-green-500 text-white p-4 rounded-lg shadow-lg md:left-auto m-1 md:top-auto md:transform-none md:fixed md:right-0 z-20">
           <div className="flex items-center justify-center space-x-2">
             <IconBrandWhatsapp size={30} />
-            <span>Whatsapp जॉईन करा</span>
+            <Button
+              onClick={handleJoinCommunity}
+              variant="light"
+              size="sm"
+              className="text-white hover:text-black"
+            >
+              Whatsapp जॉईन करा
+            </Button>
           </div>
-          <Button onClick={handleJoinCommunity} variant="light" size="sm">
-            Join Now
-          </Button>
         </div>
 
-        <div className="flex items-center justify-start space-x-2 bg-black bg-opacity-70 w-[100%] md:w-[50%] lg:w-[30%]   text-white p-4 rounded-lg shadow-lg md:fixed md:left-4 md:bottom-4 m-1">
+        <div className="inline-flex items-center justify-start space-x-2 bg-black bg-opacity-70 text-white p-4 rounded-lg shadow-lg md:fixed md:left-4 md:bottom-4 m-1">
           <img
             src="/logo512.png"
             alt="Exam Sathi"
             className="w-full h-10 m-0"
           />
-          <Button className="" onClick={handlePlayStore}>
-            Daily Revision आणि आणखी PDF साठी App Download करा
+          <Button
+            className=""
+            onClick={handlePlayStore}
+            classNames="w-full hover:text-white"
+            variant="defualt"
+          >
+            <span className="text-white">
+              Daily Revision आणि आणखी PDF साठी App Download करा
+            </span>
           </Button>
         </div>
       </div>
