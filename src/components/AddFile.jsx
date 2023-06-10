@@ -120,7 +120,7 @@ const AddFile = () => {
   const handleshare = (file) => {
     const message = `Check out this PDF: `;
     const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(
-      `${message}[${file.filename}](${file.url})`
+      `Mitra *${file.filename}* PDF hya link varun direct download kar ani ajun khup saare pan aahet check kar\nexamsathi.netlify.app`
     )}`;
     const link = document.createElement("a");
     link.href = whatsappUrl;
@@ -178,7 +178,7 @@ const AddFile = () => {
                   onClick={() => handleshare(file)}
                   className="absolute top-0 right-0 p-1"
                 >
-                  <IconBrandWhatsapp size={30} stroke="green" />
+                  <IconBrandWhatsapp size={30} stroke="green" color="green" />
                 </button>
               </div>
             ))}
@@ -208,21 +208,16 @@ const AddFile = () => {
         <div className="fixed bottom-16  md:left-auto md:right-0 md:top-1/2 md:translate-y-[-50%] z-20 m-1">
           <div className="w-full md:w-auto bg-green-500 text-white p-4 rounded-lg shadow-lg flex items-center justify-center space-x-2">
             <IconBrandWhatsapp size={30} />
-            <button
-              onClick={handleJoinCommunity}
-              className="text-white hover:text-black"
-            >
+            <button onClick={handleJoinCommunity} className="text-white">
               Whatsapp जॉईन करा
             </button>
           </div>
         </div>
-        <div className="fixed bottom-0 left-0 md:left-4 md:bottom-4 w-full md:w-auto bg-black text-white p-4 rounded-lg shadow-lg flex items-center justify-start space-x-2 mt-2 md:mt-0">
+        <div className="fixed bottom-0 left-0 md:left-4 md:bottom-4 w-full md:w-auto bg-[#504E4E] text-white p-4 rounded-lg shadow-lg flex items-center justify-start space-x-2 mt-2 md:mt-0">
           <img src="/logo512.png" alt="Exam Sathi" className="w-10 h-10" />
-          <button
-            onClick={handlePlayStore}
-            className="text-white hover:text-black"
-          >
-            Daily Revision आणि आणखी PDF साठी App Download करा
+          <button onClick={handlePlayStore} className="text-white ">
+            अशे अजून 500+ free PDFs, books, past papers आणि free doubt solving
+            साठी इथे click करा
           </button>
         </div>
       </div>
