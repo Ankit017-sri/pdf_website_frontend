@@ -111,10 +111,7 @@ const AddFile = () => {
     window.open("https://chat.whatsapp.com/KhcqRxM6R54HRliKOwFwgy", "_blank");
   };
   const handlePlayStore = () => {
-    window.open(
-      "https://play.google.com/store/apps/details?id=com.examSathi.examSathi",
-      "_blank"
-    );
+    window.open("https://bit.ly/ExamSathi_App", "_blank");
   };
 
   const handleshare = (file) => {
