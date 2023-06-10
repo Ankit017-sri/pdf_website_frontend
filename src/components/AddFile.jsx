@@ -217,7 +217,7 @@ const AddFile = () => {
         </div>
         <div className="fixed bottom-0 left-0 md:left-4 md:bottom-4 w-full md:w-auto bg-[#504E4E] text-white p-4 rounded-lg shadow-lg flex items-center justify-start space-x-2 mt-2 md:mt-0">
           <img src="/logo512.png" alt="Exam Sathi" className="w-10 h-10" />
-          <button onClick={handlePlayStore} className="text-white ">
+          <button onClick={handlePlayStore} className="text-white text-sm">
             अशे अजून 500+ free PDFs, books, past papers आणि free doubt solving
             साठी इथे click करा
           </button>
