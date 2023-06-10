@@ -111,13 +111,13 @@ const AddFile = () => {
     window.open("https://chat.whatsapp.com/KhcqRxM6R54HRliKOwFwgy", "_blank");
   };
   const handlePlayStore = () => {
-    window.open("https://bit.ly/ExamSathi_App", "_blank");
+    window.open("http://bit.ly/websiteplaystore_examsathi", "_blank");
   };
 
   const handleshare = (file) => {
     const message = `Check out this PDF: `;
     const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(
-      `Mitra *${file.filename}* PDF hya link varun direct download kar ani ajun khup saare pan aahet check kar\nexamsathi.netlify.app`
+      `Mitra *${file.filename}* PDF hya link varun direct download kar ani ajun khup saare pan aahet check kar\nhttp://bit.ly/pdfdownload_examsathi`
     )}`;
     const link = document.createElement("a");
     link.href = whatsappUrl;
