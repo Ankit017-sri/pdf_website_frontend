@@ -179,7 +179,7 @@ const AddFile = () => {
                     onClick={() => handleshare(file)}
                     className="absolute top-0 right-0 p-1"
                   >
-                    <IconBrandWhatsapp size={30} stroke="green" />
+                    <IconBrandWhatsapp size={30} stroke="green" color="green" />
                   </button>
                 </div>
               ))}
