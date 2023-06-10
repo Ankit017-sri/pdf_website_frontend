@@ -7,7 +7,7 @@ import {
   deleteObject,
 } from "firebase/storage";
 import storage from "../firebase";
-import { Button } from "@mantine/core";
+import { Button, ScrollArea } from "@mantine/core";
 import { Document, Page } from "react-pdf";
 import { pdfjs } from "react-pdf";
 import { IconFileFilled } from "@tabler/icons-react";
@@ -163,26 +163,28 @@ const AddFile = () => {
       </div>
       <div className="flex flex-col lg:flex-row">
         <div className="w-full lg:w-2/5">
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 border">
-            {fileList.map((file) => (
-              <div
-                key={file.filename}
-                className="flex flex-col items-center relative text-center p-2 cursor-pointer"
-                onClick={() => handleFileClick(file)}
-                onMouseEnter={() => setHoveredFile(file)}
-                onMouseLeave={() => setHoveredFile(null)}
-              >
-                <IconFileFilled className="w-24 h-24" />
-                <span>{file.filename}</span>
-                <button
-                  onClick={() => handleshare(file)}
-                  className="absolute top-0 right-0 p-1"
+          <ScrollArea h={700}>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 border">
+              {fileList.map((file) => (
+                <div
+                  key={file.filename}
+                  className="flex flex-col items-center relative text-center p-2 cursor-pointer"
+                  onClick={() => handleFileClick(file)}
+                  onMouseEnter={() => setHoveredFile(file)}
+                  onMouseLeave={() => setHoveredFile(null)}
                 >
-                  <IconBrandWhatsapp size={30} stroke="green" color="green" />
-                </button>
-              </div>
-            ))}
-          </div>
+                  <IconFileFilled className="w-24 h-24" />
+                  <span>{file.filename}</span>
+                  <button
+                    onClick={() => handleshare(file)}
+                    className="absolute top-0 right-0 p-1"
+                  >
+                    <IconBrandWhatsapp size={30} stroke="green" />
+                  </button>
+                </div>
+              ))}
+            </div>
+          </ScrollArea>
         </div>
         {!isMobileOrTablet && (
           <div className="w-full lg:w-3/5 mt-4 lg:mt-0">
@@ -205,7 +207,7 @@ const AddFile = () => {
         )}
       </div>
       <div className="flex flex-col md:flex-row ">
-        <div className="fixed bottom-16  md:left-auto md:right-0 md:top-1/2 md:translate-y-[-50%] z-20 m-1">
+        <div className="fixed bottom-16 md:left-auto md:right-0 md:top-1/2 md:translate-y-[-50%] z-20 m-1">
           <div className="w-full md:w-auto bg-green-500 text-white p-4 rounded-lg shadow-lg flex items-center justify-center space-x-2">
             <IconBrandWhatsapp size={30} />
             <button onClick={handleJoinCommunity} className="text-white">
